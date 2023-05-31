@@ -1,17 +1,18 @@
-const { app, BrowserWindow } = require('electron')
-// 需在当前文件内开头引入 Node.js 的 'path' 模块
+require('update-electron-app')()
+const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 
 const createWindow = () => {
   const mainWindow  = new BrowserWindow({
-    width: 800,
+    width: 1200,
     height: 600,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
   })
-
+  ipcMain.handle("ping", () => "PING")
   mainWindow.loadFile('index.html')
+  mainWindow.webContents.openDevTools()
 }
 
 app.whenReady().then(() => {
