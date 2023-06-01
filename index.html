@@ -1,23 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Document</title>
-</head>
-<body>
-    <h1>来自 Electron 渲染器的问好！</h1>
-    <p>👋</p>
-    <p id="info"></p>
-    Title: <input id="title"/>
-    <button id="btn" type="button">Set</button>
-    <br>
-    <button type="button" id="btn2">Open a File</button>
-    File path: <strong id="filePath"></strong>
-    <br>
-    Current value: <strong id="counter">0</strong>
-    <script src="./renderer.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue + TS</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
